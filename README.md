@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Italiano Eats App
+
+Create a modern, mobile-friendly web application for Italiano Restaurant. Include user ordering, order tracking, a calendar view, restaurant specials, and notifications. Use a clean, intuitive interface, easy navigation, and a fully responsive layout optimized for both mobile and desktop.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://il-ristorante-app.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/26d0dbf9-3d0e-4619-acfe-787a027db43f).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
