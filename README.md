@@ -1,26 +1,64 @@
-# Italiano Eats App
+# Italiano Restaurant
 
-Create a modern, mobile-friendly web application for Italiano Restaurant. Include user ordering, order tracking, a calendar view, restaurant specials, and notifications. Use a clean, intuitive interface, easy navigation, and a fully responsive layout optimized for both mobile and desktop.
+A modern, mobile-first web app for Italiano Restaurant — browse the menu, order dishes, track your order live, explore events on a calendar, and stay up to date with notifications.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
 
-**Live app**: https://il-ristorante-app.lovable.app
+- **Home** — chef's specials, signature classics, and a preview of upcoming events.
+- **Menu & ordering** — category filters (Antipasti, Primi, Secondi, Dolci), quantity controls, and a persistent cart saved to local storage.
+- **Live order tracking** — vertical stepper with ETA that progresses through confirmation, kitchen, quality check, and delivery.
+- **Events calendar** — interactive month view for wine tastings, jazz nights, masterclasses, and truffle dinners.
+- **Notifications** — order updates, reservation confirmations, and specials with mark-all-read.
+- **Responsive layout** — bottom tab bar on mobile, top navigation on desktop.
 
-## Build with Lovable
+## Tech stack
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/26d0dbf9-3d0e-4619-acfe-787a027db43f).
+- [TanStack Start](https://tanstack.com/start) (React 19, file-based routing, server functions)
+- Vite 7
+- TypeScript
+- Tailwind CSS v4 with a semantic OKLCH design-token theme
+- shadcn/ui components
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Getting started
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+The dev server runs at `http://localhost:8080`.
+
+```sh
+npm run build   # production build
+```
+
+## Project structure
+
+```
+src/
+  assets/                 dish and hero imagery
+  components/
+    AppShell.tsx          responsive navigation shell
+    OrderTracker.tsx      live order progress logic
+  lib/
+    cart.tsx              cart context + order placement
+    restaurant-data.ts    menu, events, notification data
+  routes/
+    __root.tsx            app shell / root layout
+    index.tsx             home
+    menu.tsx              menu & ordering
+    orders.tsx            order tracking
+    calendar.tsx          events calendar
+    notifications.tsx     alerts
+  styles.css              design tokens and theme
+```
+
+Routes are file-based — add a file in `src/routes/` to add a page. `src/routeTree.gen.ts` is generated; don't edit it by hand.
+
+## Design system
+
+All colors, gradients, and shadows are semantic tokens defined in `src/styles.css`. The palette is a warm "Modern Enoteca" direction: terracotta brand (`#A63A26`), champagne accents, and stone-dark text on a soft off-white surface. Use the tokens rather than hardcoded color utilities so theming stays consistent.
+
+## Deployment
+
+Built and hosted with [Lovable](https://lovable.dev) — publish from the editor, or deploy the standard Vite build output anywhere that supports edge/Node hosting.
