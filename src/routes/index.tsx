@@ -57,7 +57,7 @@ function Home() {
             alt="Wild forest truffle tagliatelle plated in the dining room"
             width={1200}
             height={675}
-            className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            className="aspect-[3/4] w-full object-cover sm:aspect-[16/9] transition-transform duration-700 group-hover:scale-[1.02]"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/90 to-transparent p-6 sm:p-8">
             <span className="mb-2 inline-block rounded-sm bg-primary px-2 py-1 text-[10px] uppercase tracking-tight text-primary-foreground">
