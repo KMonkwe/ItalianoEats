@@ -49,7 +49,7 @@ export function OrderProgressCard({ order }: { order: PlacedOrder }) {
           />
         ))}
       </div>
-      <p className="text-sm opacity-80">{orderStages[stage].detail}</p>
+      <p className="text-sm opacity-80">{orderStages[stage]?.detail}</p>
     </section>
   );
 }
